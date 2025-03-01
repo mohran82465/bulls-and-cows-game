@@ -15,7 +15,7 @@ This application is built using **Tailwind CSS** and **Daisy UI**, offering a cl
 
 ## Demo
 
-Live demo: [Bulls Game](https://exquisite-macaron-96c164.netlify.app/)
+Live demo: [Bulls And Cows Game](https://classy-boba-3afb58.netlify.app/)
 
 ## Technologies Used
 
