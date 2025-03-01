@@ -1,59 +1,37 @@
-# Bulls
+# Bulls Game
 
-This project was generated using [Angular CLI](https://github.com/angular/angular-cli) version 19.1.8.
+A simple number guessing game where players attempt to guess a **4-digit number**.
 
-## Development server
+## Overview
 
-To start a local development server, run:
+This application is built using **Tailwind CSS** and **Daisy UI**, offering a clean and responsive design. The game demonstrates how to implement **light mode** and **dark mode** themes dynamically.
 
-```bash
-ng serve
-```
+## Features
 
-Once the server is running, open your browser and navigate to `http://localhost:4200/`. The application will automatically reload whenever you modify any of the source files.
+- Number guessing logic with instant feedback
+- Light and dark mode themes
+- Responsive design with Tailwind CSS
+- Modern UI components using Daisy UI
 
-## Code scaffolding
+## Demo
 
-Angular CLI includes powerful code scaffolding tools. To generate a new component, run:
+Live demo: [Bulls Game](https://exquisite-macaron-96c164.netlify.app/)
 
-```bash
-ng generate component component-name
-```
+## Technologies Used
 
-For a complete list of available schematics (such as `components`, `directives`, or `pipes`), run:
+- Tailwind CSS
+- Daisy UI
+- HTML
+- TypeScript 
 
-```bash
-ng generate --help
-```
 
-## Building
 
-To build the project run:
+## How to Run
 
-```bash
-ng build
-```
+1. Clone the repository
+2. run command ng serve 
 
-This will compile your project and store the build artifacts in the `dist/` directory. By default, the production build optimizes your application for performance and speed.
+## License
 
-## Running unit tests
+This project is licensed under the MIT License.
 
-To execute unit tests with the [Karma](https://karma-runner.github.io) test runner, use the following command:
-
-```bash
-ng test
-```
-
-## Running end-to-end tests
-
-For end-to-end (e2e) testing, run:
-
-```bash
-ng e2e
-```
-
-Angular CLI does not come with an end-to-end testing framework by default. You can choose one that suits your needs.
-
-## Additional Resources
-
-For more information on using the Angular CLI, including detailed command references, visit the [Angular CLI Overview and Command Reference](https://angular.dev/tools/cli) page.
