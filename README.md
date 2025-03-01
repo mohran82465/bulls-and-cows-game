@@ -1,4 +1,4 @@
-# Bulls Game
+# Bulls And Cows Game
 
 A simple number guessing game where players attempt to guess a **4-digit number**.
 
