@@ -4,6 +4,7 @@
     to see the rules how to play Bulls and Cows game, refer to this :
     <a
       class="link link-primary"
+
       href="https://en.wikipedia.org/wiki/Bulls_and_cows"
       target="_blank"
       >link</a
@@ -11,7 +12,8 @@
   </p>
   <div class="flex justify-center">
     <input
-      type="text"
+    type="text"
+    [value]="guess()"
       (change)="inputChange($event)"
       placeholder="enter your guess"
       class="input input-bordered input-primary w-full max-w-xs"
@@ -28,16 +30,21 @@
   </div>
 
   @if (gameStatus()==='won') {
-  <button class="ml-2 btn btn-outline btn-primary" (click)="reset()">
-    Play Again
-  </button>
+    <div class="flex justify-center">
+      <button class="ml-2 btn btn-outline btn-primary " (click)="reset()">
+        Play Again
+      </button>
+
+    </div>
   }
 
   <div>
     @for (guessess of guessHistory(); track $index) {
     <div class="flex">
-      <div class="ml-9 mr-2">{{ guessess[0] }} Bulls</div>
-      <div class="">{{ guessess[1] }} Cows</div>
+
+      <div> {{guessess.n}}:</div>
+      <div class="ml-9 mr-2">{{ guessess.bulls }} Bulls</div>
+      <div class="">{{ guessess.cows }} Cows</div>
     </div>
     }
   </div>

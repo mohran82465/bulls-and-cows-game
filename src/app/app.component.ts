@@ -3,6 +3,11 @@ import { RouterOutlet } from '@angular/router';
 
 const DIGITS = 4; 
 
+interface Guess { 
+  cows:number; 
+  bulls: number; 
+  n:number; 
+}
 
 @Component({
   selector: 'app-root',
@@ -14,7 +19,7 @@ export class AppComponent {
   guess = signal('')
   answer = signal<number[]>([]);
   errorText = signal('');
-  guessHistory = signal<number[][]>([]);
+  guessHistory = signal<Guess[]>([]);
   gameStatus = signal('init')
   message = signal(''); 
   constructor() {
@@ -27,6 +32,7 @@ export class AppComponent {
     this.gameStatus.set('init'); 
     this.guessHistory.set([]); 
     this.message.set(''); 
+    this.guess.set('');
     
     while (true) {
       const digits = [];
@@ -69,7 +75,7 @@ export class AppComponent {
 
     const [bulls, cows] = this.bullsCows(digits, this.answer());
     this.guessHistory.update(h => {
-      h.push([bulls, cows]);
+    h.push({n: +digits.map(d=>d.toString()).join('') , bulls, cows});
       return h;
     })
 
