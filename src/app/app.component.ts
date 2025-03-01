@@ -1,5 +1,6 @@
-import { Component, Directive, signal } from '@angular/core';
-import { RouterOutlet } from '@angular/router';
+import { Component, Directive, inject, model, signal } from '@angular/core';
+import { FormsModule } from '@angular/forms';
+import { ThemeService } from './services/theme.service';
 
 const DIGITS = 4; 
 
@@ -11,7 +12,7 @@ interface Guess {
 
 @Component({
   selector: 'app-root',
-  imports: [RouterOutlet],
+  imports: [FormsModule],
   templateUrl: './app.component.html',
   styleUrl: './app.component.css'
 })
@@ -22,6 +23,11 @@ export class AppComponent {
   guessHistory = signal<Guess[]>([]);
   gameStatus = signal('init')
   message = signal(''); 
+  
+  readonly themeService = inject(ThemeService); 
+  isLight = model(this.themeService.getCurrentTheme()()==='light'); 
+  
+  
   constructor() {
     this.reset();
 
